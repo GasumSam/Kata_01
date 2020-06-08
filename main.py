@@ -1,22 +1,21 @@
+'''
+#Si importas todo en el print llamas al módulo
+
+import cartas
+
+print(cartas.crea_baraja())   
 
 
-palos = ('o', 'c', 'e', 'b')
-cartas = ('A', '2', '3', '4', '5', '6', '7', 'S', 'C', 'R')
+o 
 
+#Si importas específicamente el módulo cartas, ya no es encesario llamarlo en el print de forma específica, ya que en este caso ya está invocado directamente cartas
 
-def crea_baraja():  #No necesito especificar nada porque ya está definidos, si lo hiciera los recorrería
-                        #Puede ser interesante cuando hay varias tuplas de datos
-                            #Meter parámetros cuando tenga sentido hacerlo
+from cartas import crea_baraja
 
-    baraja = []
-    
-    for palo in palos:
-        for carta in cartas:
-            naipe = carta + palo
-            baraja.append(naipe)
-        
-    return baraja
+print(crea_baraja())
 
-baraja1 = crea_baraja()
+'''
 
-print(baraja1)
+import cartas
+
+print(cartas.crea_baraja())
